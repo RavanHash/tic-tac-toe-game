@@ -5,7 +5,7 @@
   --gray: #2e4756;
   --turquoise: #3cc4bf;
   --yellow: #f2b147;
-  --light-gray: #d3d3d3;
+  --light-green: #7ee89b;
 }
 
 * {
@@ -52,7 +52,7 @@ button:hover {
 
 .shadow {
   box-shadow: rgba(0, 0, 0, 0.4) 0px 2px 4px,
-  rgba(0, 0, 0, 0.3) 0px 7px 13px -3px, rgba(0, 0, 0, 0.2) 0px -3px 0px inset;
+    rgba(0, 0, 0, 0.3) 0px 7px 13px -3px, rgba(0, 0, 0, 0.2) 0px -3px 0px inset;
 }
 
 .border {
@@ -162,12 +162,37 @@ button:hover {
 }
 
 .square {
-  background-color: #ef3a4c;
+  background-color: var(--gray);
+  border-radius: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 3rem;
+}
+
+.square:hover {
+  cursor: pointer;
+  opacity: 80%;
 }
 
 .score {
-  background-color: #00c2ff;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  border-radius: 10px;
 }
+
+.score p {
+  font-size: 14px;
+  font-weight: 600;
+}
+
+.score span {
+  font-size: 12px;
+  margin-top: 2px;
+}
+
 
 .actions {
   background-color: #d94694;
