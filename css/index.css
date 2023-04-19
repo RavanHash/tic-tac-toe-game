@@ -67,7 +67,7 @@ button:hover {
 }
 
 .turn {
-  color: var(--yellow);
+  color: var(--turquoise);
 
   grid-column-start: 1;
   grid-column-end: 3;
