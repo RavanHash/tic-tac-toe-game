@@ -73,6 +73,16 @@ export default class View {
     this.$.modal.classList.add("hidden");
   }
 
+  initializeMoves(moves){
+    this.$$.squares.forEach(square => {
+      const existingMove = moves.find(move => move.squareId === +square.id);
+
+      if(existingMove){
+        this.handlePlayerMove(square, existingMove.player);
+      }
+    })
+  }
+
   #closeMenu(){
     this.$.menuItems.classList.add("hidden");
     this.$.menuItems.classList.remove("border");
@@ -98,6 +108,7 @@ export default class View {
     icon.classList.add("fa-solid", player.iconClass, player.colorClass);
     squareEl.replaceChildren(icon);
   }
+
 
   setTurnIndicator(player) {
     const icon = document.createElement("i");
